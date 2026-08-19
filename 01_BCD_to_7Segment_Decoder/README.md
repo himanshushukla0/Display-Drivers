@@ -50,7 +50,7 @@ $$\begin{array}{c|c|cccc|ccccccc|ccccccc}
 
 ## Schematic Capture (`abcdefg.sch`)
 
-![BCD to 7-Segment Decoder Schematic](../assets/abcdefg_sch.png)
+<img width="1920" height="1005" alt="abcdefg_sch" src="https://github.com/user-attachments/assets/350ef433-311d-4acb-8327-6d7ba656ebfa" />
 
 ---
 
