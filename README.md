@@ -42,6 +42,16 @@
 
 ---
 
+## Project Directory & Module Manifest
+
+| Directory | Primary Module | Circuit Category | Key Architecture / Feature | Module README |
+| :--- | :--- | :--- | :--- | :--- |
+| **`01_BCD_to_7Segment_Decoder`** | `abcdefg.sch` | Combinational Decoder | 4-bit BCD to 7-segment mapping with 7 modular gate sub-blocks ($a..g$) | [Read Module](file:///c:/Users/himan/OneDrive/Documents/GitHub/Display-Drivers/01_BCD_to_7Segment_Decoder/README.md) |
+| **`02_2Bit_Multiplexed_SSD`** | `Bit_2_SSD.sch` | Hybrid Sequential/TDM | Time-Division Multiplexed 2-digit scanning display with clock prescaler | [Read Module](file:///c:/Users/himan/OneDrive/Documents/GitHub/Display-Drivers/02_2Bit_Multiplexed_SSD/README.md) |
+| **`assets/`** | Schematics & Waveforms | Visual Artifacts | High-resolution exported schematics and ISim waveform captures | [View Assets](file:///c:/Users/himan/OneDrive/Documents/GitHub/Display-Drivers/assets/README.md) |
+
+---
+
 ## Architectural Continuum: From Sequential Registers to Display Drivers
 
 In digital computation, binary data lives inside sequential memory elements and arithmetic counters. However, raw binary vectors ($0000_2 - 1111_2$) are unreadable to human users. The display subsystem provides the critical decoding and physical drive bridge.
@@ -309,6 +319,10 @@ In the ISE Project Navigator schematic (`abcdefg.sch`):
 2. **Modular Block Decomposition**: The circuit is split into 7 separate functional blocks labeled `a`, `b`, `c`, `d`, `e`, `f`, `g`. Each sub-block contains the dedicated AND-OR gate array corresponding to its respective minimized boolean equation.
 3. **Output Bus Aggregation**: The individual outputs $a$ through $g$ converge into the unified 7-bit output bus `F[6:0]` (where `F[0]=a, F[1]=b, ..., F[6]=g`), ready for modular instantiation in higher-level systems.
 
+#### Gate-Level Schematic Capture (`abcdefg.sch`)
+
+![BCD to 7-Segment Decoder Schematic](./assets/abcdefg_sch.png)
+
 ---
 
 ## 2-Bit (2-Digit) Multiplexed SSD Architecture (`Bit_2_SSD.sch`)
@@ -441,6 +455,10 @@ Visible:     [ Display Digit 0 ]               [ Display Digit 0 ]
                                [ Display Digit 1 ]               [ Display Digit 1 ]
              ================== TOTAL PERCEIVED STEADY DISPLAY ===================
 ```
+
+#### Top-Level Schematic Capture (`Bit_2_SSD.sch`)
+
+![2-Bit Multiplexed SSD Schematic](./assets/bit_2_ssd_sch.png)
 
 ---
 
